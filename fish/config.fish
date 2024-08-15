@@ -28,7 +28,7 @@ alias cls='clear'
 alias ll='ls -la'
 alias lzd='lazydocker'
 alias lg='lazygit'
-# alias git='git.exe'
+alias gs='git status -s'
 
 # github aliases
 alias gco='git checkout'
