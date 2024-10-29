@@ -36,6 +36,9 @@ alias gcb='git checkout -b'
 alias gcd='git checkout dev'
 alias gu='git fetch --prune && git pull'
 
+# shutdown wsl from inside
+alias shutdown='wsl.exe --shutdown'
+
 # set fortune as welcome message
 # function fish_greeting
 #   echo "--------------------"
@@ -48,3 +51,7 @@ set fish_greeting
 
 # Created by `pipx` on 2024-08-11 19:00:09
 set PATH $PATH /home/ethan/.local/bin
+
+# fuck command correction
+thefuck --alias | source
+alias FUCK='fuck --hard'

@@ -1,16 +1,18 @@
 local servers = {
-  "bashls",
-  "cssls",
-  "denols",
-  "eslint",
-  "html",
-  "jsonls",
-  "lua_ls",
-  "marksman",
-  "rust_analyzer",
-  "terraformls",
-  "tsserver",
-  "yamlls",
+  "ast_grep", -- python
+  "bashls", -- bash
+  "cssls", -- css
+  "clangd", -- C/C++
+  "denols", -- deno
+  "eslint", -- javascript
+  "html", -- html
+  "jsonls", -- json
+  "lua_ls", -- lua
+  "marksman", -- markdown
+  "rust_analyzer", -- rust
+  "terraformls", -- terraform
+  "ts_ls", -- typescript
+  "yamlls", -- yaml
 }
 
 local tools = {
@@ -25,14 +27,14 @@ local no_conflict = function(client)
   local active_clients = vim.lsp.get_active_clients()
   if client.name == "denols" then
     for _, client_ in pairs(active_clients) do
-      -- stop tsserver if denols is already active
-      if client_.name == "tsserver" then
+      -- stop ts_ls if denols is already active
+      if client_.name == "ts_ls" then
         client_.stop()
       end
     end
-  elseif client.name == "tsserver" then
+  elseif client.name == "ts_ls" then
     for _, client_ in pairs(active_clients) do
-      -- prevent tsserver from starting if denols is already active
+      -- prevent ts_ls from starting if denols is already active
       if client_.name == "denols" then
         client.stop()
       end
@@ -111,7 +113,7 @@ return {
 
     -- specific setup for some servers
     require("lspconfig")["gleam"].setup({ capabilities })
-    require("lspconfig")["tsserver"].setup({
+    require("lspconfig")["ts_ls"].setup({
       capabilities,
       on_attach = no_conflict,
       root_dir = lspconfig.util.root_pattern("tsconfig.json", "jsconfig.json"),

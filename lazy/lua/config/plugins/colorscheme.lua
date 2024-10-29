@@ -1,8 +1,5 @@
 local function select_theme()
-  local process = io.popen("uname -a")
-  local sys_arch = process:read("*a")
-  process:close()
-
+  -- Select theme based on time of day
   local hour = tonumber(os.date("%H"))
 
   if hour >= 8 and hour < 18 then

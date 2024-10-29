@@ -41,11 +41,12 @@ return {
     end,
     formatters_by_ft = {
       lua = { "stylua" },
-      javascript = { { "prettierd", "prettier" } },
-      typescript = { { "prettierd", "prettier" } },
-      astro = { { "prettierd", "prettier" } },
+      javascript = { { "prettierd", "prettier", stop_after_first = true } },
+      typescript = { { "prettierd", "prettier", stop_after_first = true } },
+      astro = { { "prettierd", "prettier", stop_after_first = true } },
       rust = { "rustfmt" },
       terraform = { "terraform_fmt" },
+      python = { "black" },
     },
     formatters = {
       stylua = {
