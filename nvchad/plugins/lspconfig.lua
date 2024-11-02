@@ -4,26 +4,25 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 
 local servers = {
-  "astro",
-  "bashls",
-  "eslint",
-  "gopls",
-  "graphql",
-  "html",
-  "jsonls",
-  "marksman",
-  "prismals",
-  "rust_analyzer",
-  "sumneko_lua",
-  "tailwindcss",
-  "terraformls",
-  "tsserver",
-  "yamlls",
+	"ast_grep", -- python
+	"bashls", -- bash
+	"cssls", -- css
+	"clangd", -- C/C++
+	"denols", -- deno
+	"eslint", -- javascript
+	"html", -- html
+	"jsonls", -- json
+	"lua_ls", -- lua
+	"marksman", -- markdown
+	"rust_analyzer", -- rust
+	"terraformls", -- terraform
+	"ts_ls", -- typescript
+	"yamlls", -- yaml
 }
 
 for _, lsp in ipairs(servers) do
-  lspconfig[lsp].setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-  })
+	lspconfig[lsp].setup({
+		on_attach = on_attach,
+		capabilities = capabilities,
+	})
 end
