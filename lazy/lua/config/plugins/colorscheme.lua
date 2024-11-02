@@ -24,6 +24,18 @@ return {
         no_italic = true,
         no_bold = true,
         term_colors = true,
+        integrations = {
+          cmp = true,
+          treesitter = true,
+          gitsigns = true,
+          mason = true,
+          telescope = true,
+          rainbow_delimiters = true,
+          mini = {
+            enabled = true,
+            indentscope_color = "",
+          },
+        },
       })
       vim.cmd.colorscheme("catppuccin")
       select_theme()
