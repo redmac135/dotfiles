@@ -1,3 +1,4 @@
+-- automatically close tags in html, xml, jsx, tsx files
 return {
   "windwp/nvim-ts-autotag",
   config = function()
