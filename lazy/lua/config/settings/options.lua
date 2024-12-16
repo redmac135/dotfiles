@@ -12,6 +12,7 @@ opt.expandtab = true
 opt.tabstop = 2
 opt.softtabstop = 2 -- it was 0
 opt.shiftwidth = 2 -- it was 0
+opt.conceallevel = 1
 opt.scrolloff = 8
 opt.smartindent = true
 

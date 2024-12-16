@@ -12,6 +12,7 @@ return {
         "gleam",
         "html",
         "javascript",
+        "python",
         "json",
         "lua",
         "markdown",

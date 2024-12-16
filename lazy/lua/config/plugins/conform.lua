@@ -47,6 +47,7 @@ return {
       rust = { "rustfmt" },
       terraform = { "terraform_fmt" },
       python = { "black" },
+      svelte = { "prettierd" },
     },
     formatters = {
       stylua = {

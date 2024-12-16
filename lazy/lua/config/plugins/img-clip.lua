@@ -1,11 +1,8 @@
 return {
-  "zbirenbaum/copilot.lua",
+  "HakonHarnes/img-clip.nvim",
   event = "VeryLazy",
   opts = {
-    suggestion = {
-      auto_trigger = true,
-    },
-    copilot_node_command = vim.fn.expand("$HOME") .. "/.local/share/nvm/v20.15.0/bin/node",
+    -- recommended settings
     default = {
       embed_image_as_base64 = false,
       prompt_for_file_name = false,

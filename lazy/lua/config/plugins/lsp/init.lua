@@ -1,5 +1,5 @@
 local servers = {
-  "ast_grep", -- python
+  "pyright", -- python
   "bashls", -- bash
   "cssls", -- css
   "clangd", -- C/C++
@@ -13,6 +13,7 @@ local servers = {
   "terraformls", -- terraform
   "ts_ls", -- typescript
   "yamlls", -- yaml
+  "svelte", -- svelte
 }
 
 local tools = {
