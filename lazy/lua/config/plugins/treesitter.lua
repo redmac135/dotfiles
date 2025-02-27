@@ -22,6 +22,10 @@ return {
         "vimdoc",
         "luadoc",
         "tsx",
+        "java",
+        "latex",
+        "svelte",
+        "arduino",
       },
       highlight = {
         enable = true,

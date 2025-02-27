@@ -1,5 +1,3 @@
-local util = require("config.settings.util")
-
 vim.api.nvim_create_user_command("FormatDisable", function(args)
   if args.bang then
     -- FormatDisable! will disable for the buffer only
@@ -41,13 +39,15 @@ return {
     end,
     formatters_by_ft = {
       lua = { "stylua" },
-      javascript = { { "prettierd", "prettier", stop_after_first = true } },
-      typescript = { { "prettierd", "prettier", stop_after_first = true } },
-      astro = { { "prettierd", "prettier", stop_after_first = true } },
+      javascript = { "prettierd", "prettier", stop_after_first = true },
+      typescript = { "prettierd", "prettier", stop_after_first = true },
+      astro = { "prettierd", "prettier", stop_after_first = true },
       rust = { "rustfmt" },
       terraform = { "terraform_fmt" },
       python = { "black" },
-      svelte = { "prettierd" },
+      svelte = { "prettierd", "prettier", stop_after_first = true },
+      java = { "google-java-format" },
+      tex = { "latexindent", "bibtex-tidy" },
     },
     formatters = {
       stylua = {

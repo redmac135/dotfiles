@@ -20,6 +20,14 @@ autocmd("BufEnter", {
   end,
 })
 
+-- set arduino filetype for C++ to work
+autocmd("BufEnter", {
+  pattern = "*.ino",
+  callback = function()
+    vim.opt.filetype = "arduino"
+  end,
+})
+
 -- fix terraform syntax highlighting
 autocmd("BufEnter", {
   pattern = "*.tf",

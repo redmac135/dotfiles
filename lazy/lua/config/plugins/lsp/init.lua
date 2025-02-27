@@ -14,6 +14,9 @@ local servers = {
   "ts_ls", -- typescript
   "yamlls", -- yaml
   "svelte", -- svelte
+  "jdtls", -- java
+  "ltex", -- latex
+  "arduino_language_server", -- arduino
 }
 
 local tools = {
@@ -118,6 +121,16 @@ return {
       capabilities,
       on_attach = no_conflict,
       root_dir = lspconfig.util.root_pattern("tsconfig.json", "jsconfig.json"),
+    })
+    require("lspconfig")["arduino_language_server"].setup({
+      capabilities,
+      cmd = {
+        "arduino-language-server",
+        "-cli-config",
+        vim.fn.expand("~/.arduino15/arduino-cli.yaml"),
+        "-clangd",
+        vim.fn.stdpath("data") .. "mason/bin/clangd",
+      },
     })
     require("lspconfig")["denols"].setup({
       capabilities,

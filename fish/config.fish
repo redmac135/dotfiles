@@ -55,3 +55,9 @@ set PATH $PATH /home/ethan/.local/bin
 # fuck command correction
 thefuck --alias | source
 alias FUCK='fuck --hard'
+
+# for rust
+source "$HOME/.cargo/env.fish"
+
+# for pyenv
+pyenv init - fish | source
