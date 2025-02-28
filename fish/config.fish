@@ -2,6 +2,9 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
+# ensure oh-my-posh and zoxide are findable
+set -Ux fish_user_paths /home/ethan/.local/bin $fish_user_paths
+
 # add deno
 set -x DENO_INSTALL $HOME/.deno
 set -x PATH $PATH $DENO_INSTALL/bin
