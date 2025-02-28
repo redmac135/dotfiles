@@ -2,13 +2,12 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# add brew binaries to path
-export BREW_HOME="/home/linuxbrew/.linuxbrew/bin"
-export PATH="$PATH:$BREW_HOME"
-
 # add deno
-export DENO_INSTALL="/home/ethan/.deno"
-export PATH="$DENO_INSTALL/bin:$PATH"
+set -x DENO_INSTALL $HOME/.deno
+set -x PATH $PATH $DENO_INSTALL/bin
+
+# add nvim to path
+set -x PATH $PATH /opt/nvim/bin
 
 # set default editor to nvim
 set -x EDITOR nvim
@@ -39,25 +38,20 @@ alias gu='git fetch --prune && git pull'
 # shutdown wsl from inside
 alias shutdown='wsl.exe --shutdown'
 
-# set fortune as welcome message
-# function fish_greeting
-#   echo "--------------------"
-#   fortune
-#   echo "--------------------"
-# end
-
-# disable welcome message
-set fish_greeting
-
 # Created by `pipx` on 2024-08-11 19:00:09
-set PATH $PATH /home/ethan/.local/bin
+set -x PATH $PATH $HOME/.local/bin
 
-# fuck command correction
-thefuck --alias | source
-alias FUCK='fuck --hard'
-
-# for rust
+# rust
 source "$HOME/.cargo/env.fish"
+set -x PATH $PATH $HOME/.cargo/bin
+
+# nvm
+load_nvm > /dev/stderr
+
+# go bin
+set -x PATH $PATH $HOME/go/bin
 
 # for pyenv
+set -x PYENV_ROOT $HOME/.pyenv
+set -x PATH $PATH $PYENV_ROOT/bin
 pyenv init - fish | source
