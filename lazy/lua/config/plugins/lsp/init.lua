@@ -2,7 +2,6 @@ local servers = {
   "pyright", -- python
   "bashls", -- bash
   "cssls", -- css
-  "clangd", -- C/C++
   "denols", -- deno
   "eslint", -- javascript
   "html", -- html
@@ -62,6 +61,7 @@ return {
               package_uninstalled = "✗",
             },
           },
+          automatic_installation = { exclude = { "clangd" } },
         })
         local registry = require("mason-registry")
         for _, tool in pairs(tools) do
@@ -77,7 +77,7 @@ return {
     {
       "williamboman/mason-lspconfig.nvim",
       opts = {
-        automatic_installation = true,
+        automatic_installation = { exclude = { "clangd" } },
         ensure_installed = servers,
       },
     },
@@ -122,16 +122,6 @@ return {
       on_attach = no_conflict,
       root_dir = lspconfig.util.root_pattern("tsconfig.json", "jsconfig.json"),
     })
-    require("lspconfig")["arduino_language_server"].setup({
-      capabilities,
-      cmd = {
-        "arduino-language-server",
-        "-cli-config",
-        vim.fn.expand("~/.arduino15/arduino-cli.yaml"),
-        "-clangd",
-        vim.fn.stdpath("data") .. "mason/bin/clangd",
-      },
-    })
     require("lspconfig")["denols"].setup({
       capabilities,
       on_attach = no_conflict,
@@ -143,6 +133,10 @@ return {
           unstable = true,
         },
       },
+    })
+    require("lspconfig")["clangd"].setup({
+      capabilities,
+      cmd = { "clangd-18" },
     })
   end,
 }

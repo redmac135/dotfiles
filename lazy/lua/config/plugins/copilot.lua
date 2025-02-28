@@ -5,7 +5,7 @@ return {
     suggestion = {
       auto_trigger = true,
     },
-    copilot_node_command = vim.fn.expand("$HOME") .. "/.local/share/nvm/v20.15.0/bin/node",
+    copilot_node_command = vim.fn.expand("$HOME") .. "/.nvm/versions/node/v22.14.0/bin/node",
     default = {
       embed_image_as_base64 = false,
       prompt_for_file_name = false,
