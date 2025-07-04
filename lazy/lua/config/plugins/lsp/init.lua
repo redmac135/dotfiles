@@ -137,6 +137,22 @@ return {
     require("lspconfig")["clangd"].setup({
       capabilities,
       cmd = { "clangd-18" },
+      filetypes = { "c", "cpp", "arduino" },
+    })
+    require("lspconfig")["arduino_language_server"].setup({
+      capabilities,
+      cmd = {
+        "arduino-language-server",
+        "-cli",
+        "arduino-cli",
+        "-cli-config",
+        "~/.arduino15/arduino-cli.yaml",
+        "-clangd",
+        "clangd-18",
+        "-fqbn",
+        "esp32:esp32:esp32",
+      },
+      filetypes = { "arduino" },
     })
   end,
 }
