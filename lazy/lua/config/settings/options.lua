@@ -53,4 +53,6 @@ opt.whichwrap:append("<>[]hl")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.g.clangd_path = "/usr/bin/clangd-18"
+
 vim.cmd("filetype plugin indent on")
