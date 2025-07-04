@@ -3,7 +3,8 @@ if status is-interactive
 end
 
 # ensure oh-my-posh and zoxide are findable
-set -Ux fish_user_paths /home/ethan/.local/bin $fish_user_paths
+set -Ux fish_user_paths $HOME/bin
+set -Ux fish_user_paths $HOME/.local/bin $fish_user_paths
 
 # add deno
 set -x DENO_INSTALL $HOME/.deno
@@ -52,9 +53,19 @@ set -x PATH $PATH $HOME/.cargo/bin
 load_nvm > /dev/stderr
 
 # go bin
-set -x PATH $PATH $HOME/go/bin
+set -x PATH $PATH /usr/local/go/bin
 
 # for pyenv
 set -x PYENV_ROOT $HOME/.pyenv
 set -x PATH $PATH $PYENV_ROOT/bin
 pyenv init - fish | source
+
+# for java
+set -x JAVA_HOME /usr/lib/jvm/java-17-openjdk-arm64
+
+# bun
+set -x BUN_INSTALL "$HOME/.bun"
+set -x PATH $BUN_INSTALL/bin $PATH
+
+# go bin path
+set -x PATH $PATH $HOME/go/bin
