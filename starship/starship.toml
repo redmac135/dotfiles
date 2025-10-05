@@ -1,0 +1,59 @@
+[aws]
+symbol = "  "
+
+[buf]
+symbol = " "
+
+[bun]
+symbol = " "
+
+[c]
+symbol = " "
+
+[cpp]
+symbol = " "
+
+[cmake]
+symbol = " "
+
+[deno]
+symbol = " "
+
+[directory]
+read_only = " 󰌾"
+
+[docker_context]
+symbol = " "
+
+[gcloud]
+symbol = "  "
+
+[git_branch]
+symbol = " "
+
+[git_commit]
+tag_symbol = '  '
+
+[golang]
+symbol = " "
+
+[hostname]
+ssh_symbol = " "
+
+[java]
+symbol = " "
+
+[memory_usage]
+symbol = "󰍛 "
+
+[nodejs]
+symbol = " "
+
+[package]
+symbol = "󰏗 "
+
+[python]
+symbol = " "
+
+[rust]
+symbol = "󱘗 "

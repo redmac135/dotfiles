@@ -1,0 +1,14 @@
+[user]
+  name = Ethan Zhao
+  email = ethan.yzhao@outlook.com
+  username = redmac135
+
+[credential]
+  helper = store
+
+[init]
+	defaultBranchName = dev
+	defaultBranch = dev
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
