@@ -1,6 +1,6 @@
 # misc packages with apt
 ```bash
-sudo apt install fzf gh git unzip
+sudo apt install fzf gh unzip
 ```
 
 # golang
@@ -25,17 +25,6 @@ curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/i
 curl -sSfL https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | sh
 ```
 
-# neovim
-```bash
-sudo apt-get install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen
-git clone https://github.com/neovim/neovim.git
-cd neovim
-make CMAKE_BUILD_TYPE=Release
-sudo make install
-cd ..
-rm -rf neovim
-```
-
 # nvm
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
@@ -48,7 +37,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # tree-sitter cli
 ```bash
-npm install -g tree-sitter-cli
+cargo install tree-sitter-cli --locked
 ```
 
 # lua
@@ -58,7 +47,7 @@ sudo apt install lua5.4
 
 # luarocks
 ```bash
-sudo apt install liblua5.4-dev
+sudo apt install liblua5.4-dev make
 wget https://luarocks.org/releases/luarocks-3.11.1.tar.gz
 tar zxpf luarocks-3.11.1.tar.gz
 cd luarocks-3.11.1
