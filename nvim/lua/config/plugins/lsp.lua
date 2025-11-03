@@ -36,7 +36,17 @@ vim.diagnostic.config({
 -- Configs
 local lsps = {
 	{ "rust_analyzer" },
-	{ "clangd" },
+	{ "clangd",
+		{
+			cmd = { "clangd", "--inlay-hints" },
+			on_attach = function(client, bufnr)
+				-- Enable inlay hints
+				if client.server_capabilities.inlayHintProvider then
+					vim.lsp.inlay_hint.enable(true, { bufnr = bufnr })
+				end
+			end,
+		},
+	},
 	{ "cmake" },
 	{ "lua_ls",
 		{
