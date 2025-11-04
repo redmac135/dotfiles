@@ -5,6 +5,7 @@
 -- - clangd
 -- - cmake-language-server
 -- - bash-language-server
+-- - deno
 --
 -- mason installed
 -- - lua-language-server
@@ -32,6 +33,12 @@ vim.diagnostic.config({
 	update_in_insert = false,
 	severity_sort = true,
 })
+
+-- Root dir detection for ts projects
+local util = require("lspconfig.util")
+
+local deno_root = util.root_pattern("deno.json", "deno.jsonc")
+local ts_root = util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git")
 
 -- Configs
 local lsps = {
@@ -68,7 +75,40 @@ local lsps = {
 		{
 			cmd = { "typescript-language-server", "--stdio" },
 			filetypes = { "typescript", "javascript", "typescriptreact", "javascriptreact" },
-			root_markers = { "package.json", "tsconfig.json", "jsconfig.json", ".git" },
+			root_dir = function(bufnr, on_dir)
+				local dir = vim.fs.dirname(vim.api.nvim_buf_get_name(bufnr))
+
+				-- do not start tsserver if in a deno project
+				if deno_root(dir) then
+					return
+				end
+
+				-- start tsserver if its in a ts project
+				if ts_root(dir) then
+					on_dir(ts_root(dir))
+					return
+				end
+
+				-- fallback to single file support
+				on_dir(dir)
+			end,
+		},
+	},
+	{ "denols",
+		{
+			root_dir = function(bufnr, on_dir)
+				local dir = vim.fs.dirname(vim.api.nvim_buf_get_name(bufnr))
+
+				-- only start denols if in a deno project
+				if deno_root(dir) then
+					on_dir(deno_root(dir))
+					return
+				end
+			end,
+			init_options = {
+				lint = true,
+				unstable = true,
+			}
 		},
 	},
 }
