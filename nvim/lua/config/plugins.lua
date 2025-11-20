@@ -15,6 +15,9 @@ vim.pack.add({
 	"https://github.com/nvim-mini/mini.icons",
 	"https://github.com/nvim-mini/mini.pairs",
 
+	-- treesitter
+	"https://github.com/nvim-treesitter/nvim-treesitter",
+
 	-- copilot
 	"https://github.com/zbirenbaum/copilot.lua",
 	"https://github.com/copilotlsp-nvim/copilot-lsp",
