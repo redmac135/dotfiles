@@ -111,6 +111,7 @@ local lsps = {
 			}
 		},
 	},
+	{ "gopls" },
 }
 
 -- Default capabilities
