@@ -7,6 +7,7 @@ require('config.plugins.oil')
 require('config.plugins.copilot')
 require('config.plugins.cmp')
 require('config.plugins.mini')
+require('config.plugins.treesitter')
 require('config.plugins.lsp')
 
 -- load keymaps last as they include plugin configs
