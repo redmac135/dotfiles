@@ -22,6 +22,9 @@ vim.pack.add({
 	"https://github.com/zbirenbaum/copilot.lua",
 	"https://github.com/copilotlsp-nvim/copilot-lsp",
 
+	-- neovim tmux navigator
+	"https://github.com/christoomey/vim-tmux-navigator",
+
 	-- autocompletion
 	"https://github.com/hrsh7th/nvim-cmp",
 	"https://github.com/hrsh7th/cmp-nvim-lsp",
