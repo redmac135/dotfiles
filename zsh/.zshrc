@@ -78,6 +78,9 @@ eval "$(zoxide init zsh)"
 # bob - completions
 source <(bob complete zsh)
 
+# mise
+eval "$(mise activate zsh)"
+
 # -----------------------------
 # ZSH Configuration
 # -----------------------------

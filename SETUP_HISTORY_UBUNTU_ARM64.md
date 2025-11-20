@@ -3,11 +3,20 @@
 sudo apt install fzf gh git unzip
 ```
 
+# mise
+```bash
+curl https://mise.run | sh
+```
+
 # golang
 ```bash
-wget https://golang.org/dl/go1.24.1.linux-arm64.tar.gz
-sudo tar -C /usr/local -xzf go1.24.1.linux-arm64.tar.gz
-rm go1.24.1.linux-arm64.tar.gz
+mise install go@latest
+mise use -g go@latest
+```
+
+# gopls
+```bash
+go install golang.org/x/tools/gopls@latest
 ```
 
 # lazygit
