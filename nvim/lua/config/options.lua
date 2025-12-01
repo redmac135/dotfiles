@@ -14,3 +14,6 @@ vim.o.completeopt = 'menu,menuone,noselect'
 
 vim.o.splitright = true
 vim.o.splitbelow = true
+
+-- for tmux true color support
+vim.o.termguicolors = true
