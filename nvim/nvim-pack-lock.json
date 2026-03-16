@@ -1,56 +1,76 @@
 {
   "plugins": {
     "LuaSnip": {
-      "rev": "7381330",
+      "rev": "73813308abc2eaeff2bc0d3f2f79270c491be9d7",
       "src": "https://github.com/L3MON4D3/LuaSnip"
     },
     "cmp-nvim-lsp": {
-      "rev": "bd5a7d6",
+      "rev": "bd5a7d6db125d4654b50eeae9f5217f24bb22fd3",
       "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
     },
-    "copilot-lsp": {
-      "rev": "a80e0c1",
-      "src": "https://github.com/copilotlsp-nvim/copilot-lsp"
+    "conform.nvim": {
+      "rev": "40dcec5555f960b0a04340d76eabdf4efe78599d",
+      "src": "https://github.com/stevearc/conform.nvim"
     },
     "copilot.lua": {
-      "rev": "30b98a4",
+      "rev": "3cd5086c28c5769f5db147721f457a3e081de254",
       "src": "https://github.com/zbirenbaum/copilot.lua"
     },
+    "friendly-snippets": {
+      "rev": "572f5660cf05f8cd8834e096d7b4c921ba18e175",
+      "src": "https://github.com/rafamadriz/friendly-snippets"
+    },
     "mason.nvim": {
-      "rev": "ad7146a",
+      "rev": "ad7146aa61dcaeb54fa900144d768f040090bff0",
       "src": "https://github.com/mason-org/mason.nvim"
     },
     "mini.comment": {
-      "rev": "c40bc46",
+      "rev": "c40bc46e72f41d3db265f6d86deb3dc259c0985d",
       "src": "https://github.com/nvim-mini/mini.comment"
     },
     "mini.icons": {
-      "rev": "2847986",
+      "rev": "284798619aed9f4c1ac1b9417b9a5e3b4b85ef3a",
       "src": "https://github.com/nvim-mini/mini.icons"
     },
     "mini.pairs": {
-      "rev": "b9aada8",
+      "rev": "b9aada8c0e59f2b938e98fbf4eae0799eba96ad9",
       "src": "https://github.com/nvim-mini/mini.pairs"
     },
+    "nvim-autopairs": {
+      "rev": "59bce2eef357189c3305e25bc6dd2d138c1683f5",
+      "src": "https://github.com/windwp/nvim-autopairs"
+    },
     "nvim-cmp": {
-      "rev": "b5311ab",
+      "rev": "b5311ab3ed9c846b585c0c15b7559be131ec4be9",
       "src": "https://github.com/hrsh7th/nvim-cmp"
     },
     "nvim-lspconfig": {
-      "rev": "e688b48",
+      "rev": "b8c3630ce37dfbe51910b68785a71620b072c41a",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
+    "nvim-treesitter": {
+      "rev": "42fc28ba918343ebfd5565147a42a26580579482",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
+    },
+    "nvim-ts-autotag": {
+      "rev": "8e1c0a389f20bf7f5b0dd0e00306c1247bda2595",
+      "src": "https://github.com/windwp/nvim-ts-autotag"
+    },
     "oil.nvim": {
-      "rev": "919e155",
+      "rev": "919e155fdf38e9148cdb5304faaaf53c20d703ea",
       "src": "https://github.com/stevearc/oil.nvim"
     },
     "snacks.nvim": {
-      "rev": "bfe8c26",
+      "rev": "bfe8c26dbd83f7c4fbc222787552e29b4eccfcc0",
       "src": "https://github.com/folke/snacks.nvim"
     },
     "vague.nvim": {
-      "rev": "25107de",
+      "rev": "25107deb4221993429a4af404618fef066711cf3",
       "src": "https://github.com/vague2k/vague.nvim"
+    },
+    "vim-tmux-navigator": {
+      "rev": "c45243dc1f32ac6bcf6068e5300f3b2b237e576a",
+      "src": "https://github.com/christoomey/vim-tmux-navigator"
     }
   }
 }

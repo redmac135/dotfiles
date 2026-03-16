@@ -14,16 +14,23 @@ vim.pack.add({
 	"https://github.com/nvim-mini/mini.comment",
 	"https://github.com/nvim-mini/mini.icons",
 	"https://github.com/nvim-mini/mini.pairs",
+	"https://github.com/stevearc/conform.nvim",
 
 	-- treesitter
 	"https://github.com/nvim-treesitter/nvim-treesitter",
 
 	-- copilot
 	"https://github.com/zbirenbaum/copilot.lua",
-	"https://github.com/copilotlsp-nvim/copilot-lsp",
 
 	-- neovim tmux navigator
 	"https://github.com/christoomey/vim-tmux-navigator",
+
+	-- snippets
+	"https://github.com/rafamadriz/friendly-snippets",
+
+	-- nvim-ts-autotag and autopairs
+	"https://github.com/windwp/nvim-ts-autotag",
+	"https://github.com/windwp/nvim-autopairs",
 
 	-- autocompletion
 	"https://github.com/hrsh7th/nvim-cmp",

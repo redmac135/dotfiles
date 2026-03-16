@@ -6,4 +6,7 @@ copilot.setup({
 		auto_trigger = true,
 	},
 	panel = { enabled = false },
+	filetypes = {
+		markdown = true,
+	}
 })

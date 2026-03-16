@@ -1,28 +1,3 @@
--- LSP Config
---
--- locally installed:
--- - rust-analyzer
--- - clangd
--- - cmake-language-server
--- - bash-language-server
--- - deno
---
--- mason installed
--- - lua-language-server
--- - typescript-language-server
-
--- Mason Ensure Installed
--- We don't use Mason's ensure installed as we can't lazy load
-local mason_registry = require("mason-registry")
-local lsp_packages = { "lua-language-server", "typescript-language-server" }
-
-for _, pkg_name in ipairs(lsp_packages) do
-	local pkg = mason_registry.get_package(pkg_name)
-	if not pkg:is_installed() then
-		pkg:install()
-	end
-end
-
 -- Diagnostic Float
 vim.diagnostic.config({
 	virtual_text = {
@@ -112,6 +87,16 @@ local lsps = {
 		},
 	},
 	{ "gopls" },
+	{ "html" },
+	{ "cssls" },
+	{ "dockerls" },
+	{ "yamlls" },
+	{ "svelte" },
+	{ "pyright",
+		{
+			single_file_support = true,
+		}
+	},
 }
 
 -- Default capabilities

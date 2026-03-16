@@ -7,8 +7,12 @@ require('config.plugins.oil')
 require('config.plugins.copilot')
 require('config.plugins.cmp')
 require('config.plugins.mini')
+require('config.plugins.mason')
 require('config.plugins.treesitter')
 require('config.plugins.lsp')
+require('config.plugins.conform')
+require('config.plugins.autotag')
+require('config.plugins.autopairs')
 
 -- load keymaps last as they include plugin configs
 require('config.keymaps')
