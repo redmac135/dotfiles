@@ -26,7 +26,6 @@ link() {
 mkdir -p "$HOME/.config"
 
 link "$DOTFILES/nvim" "$HOME/.config/nvim"
-link "$DOTFILES/timewarrior" "$HOME/.config/timewarrior"
 link "$DOTFILES/starship/starship.toml" "$HOME/.config/starship.toml"
 link "$DOTFILES/tmux/.tmux.conf" "$HOME/.tmux.conf"
 link "$DOTFILES/zsh/.zshrc" "$HOME/.zshrc"
