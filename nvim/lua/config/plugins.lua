@@ -17,7 +17,7 @@ vim.pack.add({
 	"https://github.com/stevearc/conform.nvim",
 
 	-- treesitter
-	"https://github.com/nvim-treesitter/nvim-treesitter",
+	{ src = "https://github.com/nvim-treesitter/nvim-treesitter", branch = "main" },
 
 	-- copilot
 	"https://github.com/zbirenbaum/copilot.lua",
@@ -40,4 +40,4 @@ vim.pack.add({
 
 require("mason").setup()
 
-vim.cmd('colorscheme vague')
+vim.cmd("colorscheme vague")

@@ -1,24 +1,19 @@
-local treesitter = require("nvim-treesitter.configs")
+local ts = require("nvim-treesitter")
 
----@diagnostic disable-next-line: missing-fields
-treesitter.setup({
-	ensure_installed = {
-		"bash",
-		"c",
-		"cpp",
-		"css",
-		"html",
-		"javascript",
-		"json",
-		"lua",
-		"python",
-		"rust",
-		"typescript",
-		"yaml",
-		"go",
-	},
-	auto_install = true,
-	highlight = {
-		enable = true,
-	},
+ts.install({
+	"bash",
+	"c",
+	"cpp",
+	"css",
+	"dockerfile",
+	"html",
+	"javascript",
+	"json",
+	"lua",
+	"python",
+	"rust",
+	"svelte",
+	"typescript",
+	"yaml",
+	"go",
 })
