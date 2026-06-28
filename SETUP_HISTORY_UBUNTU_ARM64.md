@@ -187,11 +187,6 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.3/install.sh | bash
 sudo apt install xclip
 ```
 
-# timewarrior
-```bash
-sudo apt install timewarrior
-```
-
 # bash-language-server
 ```bash
 sudo snap install bash-language-server --classic
